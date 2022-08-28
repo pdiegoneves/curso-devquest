@@ -1,0 +1,18 @@
+h1 {
+    /* display: inline; */
+}
+
+p {
+    /* display: inline; */
+}
+
+span {
+    color: coral;
+
+    /* display: block; */
+    background-color: cornflowerblue;
+
+    width: 200px;
+
+    height: 200px;
+}

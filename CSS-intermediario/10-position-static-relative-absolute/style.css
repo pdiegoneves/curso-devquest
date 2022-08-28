@@ -1,0 +1,30 @@
+* {
+    maring: 0;
+}
+
+.elemento {
+    color: #fff;
+    font-size: 32px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 20px ;
+}
+
+.estatico {
+    position: static;
+    background-color: crimson;
+    left: 100px;
+}
+
+.relativo {
+    position: relative;
+    background-color: coral;
+}
+
+.absoluto {
+    position: absolute;
+    left: 200px;
+    background-color: darkcyan;
+    top: 0;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Estilos</title>
+    <style>
+        .fonte-grande {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulando Estilos</h1>
+
+    <button onclick="alterarCorDeFundoPrimeiroPost()">Alterar cor de fundo do primeiro post</button>
+    <br><br>
+    <button onclick="aumentarFonteSegundoPost()">Aumentar a fonte</button>
+
+    <article class="post">
+        <p><strong>Diego Neves</strong>@pdiegoneves - 10min</p>
+        <p class="texto-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore dicta, earum temporibus expedita minima omnis sunt nulla ipsam obcaecati explicabo eligendi amet atque accusantium eius placeat maiores ipsa!</p>
+        <br>
+
+        <div clacss="comentarios">
+            <h3>Comentários:</h3>
+            <br>
+            <div id="novos-comentarios"></div>
+        </div>
+    </article>
+
+
+    <article class="post">
+        <p><strong>Diego Neves</strong>@pdiegoneves - 10min</p>
+        <p class="texto-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore dicta, earum temporibus expedita minima omnis sunt nulla ipsam obcaecati explicabo eligendi amet atque accusantium eius placeat maiores ipsa!</p>
+        <br>
+
+        <div clacss="comentarios">
+            <h3>Comentários:</h3>
+            <br>
+            <div id="novos-comentarios"></div>
+        </div>
+    </article>
+    <h2>Manipulando atributos</h2>
+    <button onclick="marcarRadio('F')">Marcar radio femenino</button>
+    <button onclick="marcarRadio('M')">Marcar radio masculino</button>
+    <br><br>
+    Masculino <input type="radio" name="genero" id="genero-masculino">
+    Feminino  <input type="radio" name="genero" id="genero-feminino">
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+git config --global user.name "nome"
+git config --global user.email "email"
+
+
+Na pasta, após criar pasta e repositório
+
+git init
+git branch -M main
+git remote add origin -------- (tem no repositório) - usar https
+git push -u origin main

@@ -1,0 +1,25 @@
+.primeira-letra::first-letter {
+    font-size: 2em;
+    color: coral;
+}
+
+ .primeira-linha::first-line {
+    color: coral;
+     
+ }
+
+ li::marker {
+    color: red;
+    font-size: 23px;
+ }
+
+ h2::before {
+    content: url(images/logo.jpg);
+ }
+ h2::after {
+    content: "";
+    background: url(images/logo.jpg) center center no-repeat;
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+ }
