@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Form from "../forms/form";
 
 async function createDeck() {
   const response = await fetch(
@@ -10,7 +11,7 @@ async function createDeck() {
 
 async function getCards(deckId) {
   const response = await fetch(
-    `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=52`
+    `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`
   );
   return await response.json();
 }
@@ -37,47 +38,29 @@ const DeckOfCards = () => {
       const deckID = await createDeck();
       const data = await getCards(deckID);
       setDeck({
-        cards: data.cards
-      })
-    }
-    fetchData()
-  }, [])
+        cards: data.cards,
+      });
+    };
+    fetchData();
+  }, []);
 
-  return <section>
-    {deck.cards.length > 0 ? <CardsList cards={deck.cards}/> : "Nenhuma carta encontrada"}
-  </section>;
+  const addCard = (newCard) => {
+    console.log(newCard);
+    setDeck({
+      cards: [...deck.cards, newCard],
+    });
+  };
 
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     cards: [],
-  //   };
-  // }
-
-  // async componentDidMount() {
-  //   const deckID = await createDeck();
-  //   const data = await getCards(deckID);
-
-  //   this.setState({
-  //     cards: data.cards,
-  //   });
-  // }
-
-  // render() {
-  //   return (
-  //     <section>
-  //       <ul>
-  //         {this.state.cards.map((card, index) => {
-  //           return (
-  //             <li key={index}>
-  //               <img src={card.image} alt={card.value} />
-  //             </li>
-  //           );
-  //         })}
-  //       </ul>
-  //     </section>
-  //   );
-  // }
+  return (
+    <section>
+      <Form addCard={addCard} />
+      {deck.cards.length > 0 ? (
+        <CardsList cards={deck.cards} />
+      ) : (
+        "Nenhuma carta encontrada"
+      )}
+    </section>
+  );
 };
 
 export default DeckOfCards;
