@@ -6,8 +6,7 @@ import Card from "./components/card/card";
 function App() {
   return (
     <>
-      <Button />
-      <Button />
+      <Button label='Baixar CV'/>
       <Button />
       <Card>
         <h3>Título Card 1</h3>
